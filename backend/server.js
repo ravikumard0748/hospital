@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const db = require('./db'); // Connect to DB
 const patientRoutes = require('./patient');
+const staffRoutes = require('./routes/staffRoutes');
 
 const app = express();
 const port = 5000;
@@ -13,6 +14,7 @@ app.use(cors());
 
 // Routes
 app.use('/patients', patientRoutes);
+app.use('/api', staffRoutes);
 
 // Start the server
 app.listen(port, () => {

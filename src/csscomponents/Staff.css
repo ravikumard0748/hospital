@@ -1,0 +1,119 @@
+.staff-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 80px auto 0 80px;
+    transition: all 0.3s ease;
+}
+
+.navbar:hover + .staff-container {
+    margin-left: 270px;
+}
+
+.staff-container h2 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.add-form {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-form h3 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.add-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.add-form input,
+.add-form select,
+.add-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.add-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.add-form button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.add-form button:hover {
+    background-color: #2980b9;
+}
+
+.list-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.list-container h3 {
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.staff-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.staff-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-5px);
+}
+
+.staff-card h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.staff-card p {
+    color: #7f8c8d;
+    margin: 5px 0;
+}
+
+.delete-btn {
+    background-color: #e74c3c;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+    background-color: #c0392b;
+}
