@@ -1,6 +1,31 @@
 import React from 'react';
 import '../csscomponents/LandingPage.css';
 
+const ContactSection = () => {
+  return (
+    <div className="contact-section">
+      <h2>Contact Us</h2>
+      <div className="contact-info">
+        <div className="contact-item">
+          <i className="fas fa-phone"></i>
+          <p>Phone: <a href="tel:+918825677072">+91 88256 77072</a></p>
+        </div>
+        <div className="contact-item">
+          <i className="fas fa-envelope"></i>
+          <p>Email: <a href="mailto:DisSolve@gmail.com">DisSolve@gmail.com</a></p>
+        </div>
+        <div className="contact-item">
+          <i className="fas fa-map-marker-alt"></i>
+          <p>172, Pillayar Kovil St,<br />
+             Deepamangalam, Aanaikuppam (PO),<br />
+             Tiruvarur (DT), Tamil Nadu<br />
+             PIN: 610105</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 const LandingPage = () => {
   return (
     <div className="landing-container">
@@ -84,6 +109,8 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
+
+      <ContactSection />
     </div>
   );
 };

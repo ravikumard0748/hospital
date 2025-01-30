@@ -6,9 +6,11 @@ const Home = () => {
   return (
     <div className='home'>
       <div className='topnav'>
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <h1>🏥DisSol</h1>
-        </Link>
+        <div className="logo-container">
+          <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+            <h1>DisSol Hospital</h1>
+          </Link>
+        </div>
       </div>
       <div className="navbar">
         <nav>
