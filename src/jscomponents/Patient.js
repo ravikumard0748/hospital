@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import '../csscomponents/Staff.css';
+import '../csscomponents/patients.css';
 
 function Patient() {
     const [patients, setPatients] = useState([]);
@@ -86,97 +86,116 @@ function Patient() {
     };
 
     return (
-        <div className="staff-container">
-            <div className="staff-form">
+        <div className="patient-container">
+            <div className="add-patient-form">
                 <h2>Add New Patient</h2>
                 <form onSubmit={handleSubmit}>
-                    <input
-                        type="text"
-                        name="name"
-                        placeholder="Name"
-                        value={newPatient.name}
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <input
-                        type="number"
-                        name="age"
-                        placeholder="Age"
-                        value={newPatient.age}
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <select
-                        name="gender"
-                        value={newPatient.gender}
-                        onChange={handleInputChange}
-                        required
-                    >
-                        <option value="">Select Gender</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                        <option value="Other">Other</option>
-                    </select>
-                    <input
-                        type="tel"
-                        name="contact"
-                        placeholder="Contact"
-                        value={newPatient.contact}
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="address"
-                        placeholder="Address"
-                        value={newPatient.address}
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <input
-                        type="text"
-                        name="diagnosis"
-                        placeholder="Diagnosis"
-                        value={newPatient.diagnosis}
-                        onChange={handleInputChange}
-                        required
-                    />
-                    <button type="submit">Add Patient</button>
+                    <div className="input-grid">
+                        <div className="input-group">
+                            <input
+                                type="text"
+                                name="name"
+                                placeholder="Name"
+                                value={newPatient.name}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="input-group">
+                            <input
+                                type="number"
+                                name="age"
+                                placeholder="Age"
+                                value={newPatient.age}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="input-group">
+                            <select
+                                name="gender"
+                                value={newPatient.gender}
+                                onChange={handleInputChange}
+                                required
+                            >
+                                <option value="">Select Gender</option>
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </div>
+                        <div className="input-group">
+                            <input
+                                type="text"
+                                name="contact"
+                                placeholder="Contact"
+                                value={newPatient.contact}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="input-group">
+                            <input
+                                type="text"
+                                name="address"
+                                placeholder="Address"
+                                value={newPatient.address}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                        <div className="input-group">
+                            <input
+                                type="text"
+                                name="diagnosis"
+                                placeholder="Diagnosis"
+                                value={newPatient.diagnosis}
+                                onChange={handleInputChange}
+                                required
+                            />
+                        </div>
+                    </div>
+                    <button type="submit" className="add-btn">Add Patient</button>
                 </form>
             </div>
 
-            <div className="staff-list">
+            <div className="patient-list">
                 <h2>Patient List</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Age</th>
-                            <th>Gender</th>
-                            <th>Contact</th>
-                            <th>Address</th>
-                            <th>Diagnosis</th>
-                            <th>Action</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {patients.map((patient) => (
-                            <tr key={patient._id}>
-                                <td>{patient.name}</td>
-                                <td>{patient.age}</td>
-                                <td>{patient.gender}</td>
-                                <td>{patient.contact}</td>
-                                <td>{patient.address}</td>
-                                <td>{patient.diagnosis}</td>
-                                <td>
-                                    <button className="delete-btn" onClick={() => handleDelete(patient._id, patient.name)}>
-                                        Delete
-                                    </button>
-                                </td>
+                <div className="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Age</th>
+                                <th>Gender</th>
+                                <th>Contact</th>
+                                <th>Address</th>
+                                <th>Diagnosis</th>
+                                <th>Action</th>
                             </tr>
-                        ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            {patients.map((patient) => (
+                                <tr key={patient._id}>
+                                    <td>{patient.name}</td>
+                                    <td>{patient.age}</td>
+                                    <td>{patient.gender}</td>
+                                    <td>{patient.contact}</td>
+                                    <td>{patient.address}</td>
+                                    <td>{patient.diagnosis}</td>
+                                    <td>
+                                        <button
+                                            className="delete-btn"
+                                            onClick={() => handleDelete(patient._id, patient.name)}
+                                        >
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
     );

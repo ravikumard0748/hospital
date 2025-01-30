@@ -44,18 +44,33 @@
 }
 
 .add-form button {
-    background-color: #3498db;
+    background-color: #7c3aed;
     color: white;
-    padding: 12px;
+    padding: 10px 20px;
     border: none;
-    border-radius: 4px;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
 }
 
 .add-form button:hover {
-    background-color: #2980b9;
+    background-color: #5b21b6;
+}
+
+.delete-btn {
+    background-color: #7c3aed;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #5b21b6;
 }
 
 .list-container {
@@ -91,19 +106,4 @@
 .staff-card p {
     color: #7f8c8d;
     margin: 5px 0;
-}
-
-.delete-btn {
-    background-color: #e74c3c;
-    color: white;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-}
-
-.delete-btn:hover {
-    background-color: #c0392b;
 }
