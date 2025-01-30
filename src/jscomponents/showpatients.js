@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../csscomponents/patients.css';
 
+
 const ShowPatients = () => {
     const [patients, setPatients] = useState([]);
     useEffect(() => {
