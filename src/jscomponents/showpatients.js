@@ -3,8 +3,6 @@ import '../csscomponents/patients.css';
 
 const ShowPatients = () => {
     const [patients, setPatients] = useState([]);
-
-    // Fetch all patients when the component mounts
     useEffect(() => {
         const fetchPatients = async () => {
             try {

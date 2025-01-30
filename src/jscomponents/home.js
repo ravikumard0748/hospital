@@ -5,29 +5,34 @@ import '../csscomponents/home.css';
 const Home = () => {
   return (
     <div className='home'>
-      <div className='navbar'>
+      <div className='topnav'>
+        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+          <h1>🏥DisSol</h1>
+        </Link>
+      </div>
+      <div className="navbar">
         <nav>
           <ul>
             <Link to="/patients" className='linkingbar'>
-              <li>👥 Patients</li>
+              <li>Patients</li>
             </Link>
             <Link to="/doctors" className='linkingbar'>
-              <li>👨‍⚕️ Doctors</li>
+              <li>Doctors</li>
             </Link>
             <Link to="/nurses" className='linkingbar'>
-              <li>👩‍⚕️ Nurses</li>
+              <li>Nurses</li>
             </Link>
             <Link to="/departments" className='linkingbar'>
-              <li>🏥 Departments</li>
+              <li>Departments</li>
+            </Link>
+            <Link to="/operations" className='linkingbar'>
+              <li>Operations</li>
+            </Link>
+            <Link to="/patient-history" className='linkingbar'>
+              <li>Patient History</li>
             </Link>
           </ul>
         </nav>
-      </div>
-      <div className='topnav'>
-        <h1>🏥 DisSol</h1>
-      </div>
-      <div className="main-content">
-        {/* Main content will be rendered here by React Router */}
       </div>
     </div>
   );

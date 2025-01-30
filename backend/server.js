@@ -4,6 +4,8 @@ const cors = require('cors');
 const db = require('./db'); // Connect to DB
 const patientRoutes = require('./patient');
 const staffRoutes = require('./routes/staffRoutes');
+const operationRoutes = require('./routes/operations');
+const patientHistoryRoutes = require('./routes/patientHistory');
 
 const app = express();
 const port = 5000;
@@ -15,6 +17,8 @@ app.use(cors());
 // Routes
 app.use('/patients', patientRoutes);
 app.use('/api', staffRoutes);
+app.use('/api/operations', operationRoutes);
+app.use('/api/patient-history', patientHistoryRoutes);
 
 // Start the server
 app.listen(port, () => {
